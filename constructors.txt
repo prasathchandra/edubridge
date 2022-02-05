@@ -1,0 +1,72 @@
+1.class Main {
+  private String name;
+
+  // constructor
+  Main() {
+    System.out.println("Constructor Called:");
+    name = "Programiz";
+  }
+
+  public static void main(String[] args) {
+
+    // constructor is invoked while
+    // creating an object of the Main class
+    Main obj = new Main();
+    System.out.println("The name is " + obj.name);
+  }
+}
+
+Output:
+Constructor Called:
+The name is Programiz
+
+2. Example of Default parameters
+class Bike1{  
+Bike1(){System.out.println("Bike is created");}  
+public static void main(String args[]){    
+Bike1 b=new Bike1();  
+}  
+}  
+
+Output: Bike is created
+
+3.Example of default constructor
+class Student3{  
+int id;  
+String name;  
+void display(){System.out.println(id+" "+name);}  
+  
+public static void main(String args[]){  
+Student3 s1=new Student3();  
+Student3 s2=new Student3();  
+s1.display();  
+s2.display();  
+}  
+}
+
+Output: 0 null
+	0 null
+
+4. Example of parameterized constructor
+class Student4{  
+    int id;  
+    String name;  
+    Student4(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+    void display(){System.out.println(id+" "+name);}  
+   
+    public static void main(String args[]){  
+    //creating objects and passing values  
+    Student4 s1 = new Student4(111,"Keerthu");  
+    Student4 s2 = new Student4(222,"Mithu");  
+    s1.display();  
+    s2.display();  
+   }  
+}  
+
+Output: 111 Keerthu
+	222 Mithu
+
+

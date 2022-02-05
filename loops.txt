@@ -1,0 +1,319 @@
+1. Write a program to print a number from 1 to 10
+package loops;
+
+public class print {
+
+	public static void main(String[] args) {
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+Output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+2.Write a program to print sum of first 10 natural numbers
+package loops;
+
+public class sumof10 {
+
+	public static void main(String[] args) {
+		int sum=0;
+		for(int i=1;i<=10;i++)
+		{
+			sum=sum+i;
+	
+		}
+		// TODO Auto-generated method stub
+		System.out.println("sum of first 10 natural numbers is  =  "+sum);
+	}
+
+}
+Output:
+sum of first 10 natural numbers is  =  55
+
+
+3.Write a program that prompts the user to input a positive integer.It should then print the multiplication table of that number
+package loops
+
+public class tables {
+
+	public static void main(String[] args) {
+		System.out.println("enter the number");
+	int n;
+		int i;
+		Scanner sc=new Scanner(System.in);
+		i=sc.nextInt();
+		for( n=1;n<=10;n++)
+		{
+		
+			System.out.println(+i+"  x "+n+" = "+i*n);
+		}
+		
+		
+
+	}
+
+}
+Output:
+enter the number
+10
+10  x 1 = 10
+10  x 2 = 20
+10  x 3 = 30
+10  x 4 = 40
+10  x 5 = 50
+10  x 6 = 60
+10  x 7 = 70
+10  x 8 = 80
+10  x 9 = 90
+10  x 10 = 100
+
+
+
+4.Write a program to find factorial of number enterd through keyboard
+package loops;
+import java.util.Scanner;
+
+
+public class fact {
+
+	public static void main(String[] args) {
+		System.out.println("enter the number to get factorial");
+		int n;
+		int i=1;
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		while(n>0)
+		{
+		i=i*n;
+		n=n-1;
+		}
+		System.out.println("Factorial = "+i );
+		
+	}
+
+}
+Output:
+enter the number to get factorial
+
+5
+Factorial = 120
+
+
+5.Write a program to find the value of one number raised to the power of another
+package loops;
+import java.util.Scanner;
+public class power {
+
+	public static void main(String[] args) {
+		
+		int a;
+		System.out.println("enter value of a");
+		
+		Scanner sc=new Scanner(System.in);
+		a=sc.nextInt();
+		System.out.println("enter value of b");
+		Scanner sc1=new Scanner(System.in);
+		int b=sc1.nextInt();
+		
+		int m=a,n=b;
+		while(n>1)
+			
+		{
+		m=m*a;
+		n--;
+		}
+		System.out.println(m);
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+Output :
+enter value of a
+
+5
+enter value of b
+
+2
+25
+
+
+6.Write a program to reverse the number
+package loops;
+import java.util.Scanner;
+
+public class reverse {
+
+	public static void main(String[] args) {
+		int n;
+		int r;
+		//int reverse=0;
+		System.out.println("enter number to be reversed");
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		while(n>0)
+		{
+			r=n%10;
+			// reverse=reverse*10+r;
+			n=n/10;
+		
+			System.out.print(r);
+		}
+		
+	
+	}
+
+}
+
+Output
+enter number to be reversed
+
+34564
+46543
+7.Write a program that reads a set of integer,and then prints the sum of even and odd integers
+package loops;
+import java.util.Scanner;
+
+public class oddeven {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+int number;
+int number2;
+int even=0;
+int odd=0;
+System.out.println("enter the range from");		
+
+number=sc.nextInt();
+System.out.println("to");
+number2=sc.nextInt();
+
+
+for(int i=number;i<=number2;i++)
+if(number%2==0)
+{
+	even=even+number;
+}
+else
+{
+	odd=odd+number;
+	
+}
+
+
+System.out.println(even);
+System.out.println(odd);
+	}
+
+}
+
+
+8.Write a program to check whether the number is prime or not
+package loops;
+import java.util.Scanner;
+public class prime {
+
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+			int number;
+			System.out.println("enter the positive integer");
+			number=sc.nextInt();
+			boolean flag=true;
+			for(int i=2;i<number;i++)
+			{
+				if(number%i==0)
+				{
+					flag=false;
+					break;
+					
+				}
+			}
+if(flag && number>1)
+{
+	System.out.println("number is prime");
+	
+}
+else
+{
+	System.out.println("number is not prime");
+	
+}
+	}
+
+}
+
+Output1:
+enter the positive integer
+
+5
+number is prime
+
+output2:
+enter the positive integer
+
+6
+number is not prime
+
+
+9.Write a program to find a hcf of give two numbers
+package loops;
+import java.util.Scanner;
+
+public class hcf {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int dividend,divisor;
+		int reminder,hcf=0;
+		System.out.println("Enter the first number");
+		dividend=sc.nextInt();
+		System.out.println("Enter the second number");
+		divisor=sc.nextInt();
+		do
+		{
+			reminder=dividend%divisor;
+			if(reminder==0)
+			{
+				hcf=divisor;
+				
+			}
+			else
+			{
+				dividend=divisor;
+				divisor=reminder;
+			}
+	
+		}while(reminder!=0);
+		System.out.println("hcf: "+hcf);
+		
+		
+
+	}
+
+}
+
+Output:
+Enter the first number
+
+88
+Enter the second number
+
+56
+hcf: 8
